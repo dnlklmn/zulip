@@ -207,6 +207,24 @@
     --space-xl: var(--space-6); /* 1.5em  ≈ 24px */
     --space-2xl: var(--space-8); /* 2em    ≈ 32px */
 
+    /* ============================================================
+       Font-size scale.
+
+       em-based so sizes inherit proportionally. Ratios follow
+       Tailwind's canonical text scale (0.75, 0.875, 1, 1.125,
+       1.25, 1.5, 1.875) expressed in em. The px value in each
+       comment assumes a 16px parent; at Zulip's 14px base the
+       rendered sizes are proportionally smaller.
+       ============================================================ */
+
+    --text-size-xs: 0.75em; /* ~12px @ 16 */
+    --text-size-sm: 0.875em; /* ~14px */
+    --text-size-md: 1em; /* base */
+    --text-size-lg: 1.125em; /* ~18px */
+    --text-size-xl: 1.25em; /* ~20px */
+    --text-size-2xl: 1.5em; /* ~24px */
+    --text-size-3xl: 1.875em; /* ~30px */
+
     color-scheme: light;
 
     /* Variable for setting the viewport to full height.
