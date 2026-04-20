@@ -255,7 +255,7 @@
     /*
     Height of the search box, which appears in the header.
     */
-    --search-box-height: 2em; /* 32px at 16px em */
+    --search-box-height: var(--space-2xl); /* 2em, 32px at 16px em */
     --search-box-width: 9.375em; /* 150px at 16px em */
 
     @media (width < $md_min) {
@@ -323,7 +323,7 @@
     );
     /* This represents the space in the sidebar reserved for symbols like
        the #; labels like the stream name go to the right of this. */
-    --left-sidebar-icon-column-width: 1em;
+    --left-sidebar-icon-column-width: var(--space-lg); /* 1em */
     /* Offset on unreads to make New topic button appear centered. */
     --left-sidebar-unread-offset: 6.5px;
     /* space direct message / stream / topic names from unread counters
@@ -415,7 +415,7 @@
        which separates the right sidebar from the message area. */
     --right-sidebar-padding-left: 2px;
     --right-sidebar-heading-left-spacing: 5px;
-    --right-sidebar-avatar-width: 2em;
+    --right-sidebar-avatar-width: var(--space-2xl); /* 2em */
     --right-sidebar-avatar-height: var(--right-sidebar-avatar-width);
     --right-sidebar-avatar-right-margin: 0.85ch;
     --right-sidebar-presence-circle-width: 1.4285em; /* 20px at 14px em */
@@ -599,7 +599,7 @@
     allow elements like DM pills to stack without breaking out of their
     flex item. 2em is 32px at 16px/1em.
     */
-    --compose-recipient-box-min-height: 2em;
+    --compose-recipient-box-min-height: var(--space-2xl); /* 2em, 32px at 16px/1em */
     /* 28px at 14px/1em */
     /* Note that this variable can only be used in contexts where
        the font-size doesn't deviate from the base font-size;
@@ -607,7 +607,7 @@
        uses font-sizing to adjust the size of the icon. Related
        values have been noted in comments with this variable name,
        to make their coordination a little less painful. */
-    --compose-formatting-buttons-row-height: 2em;
+    --compose-formatting-buttons-row-height: var(--space-2xl); /* 2em */
 
     /*
     Width of the area where the compose box buttons are placed, "inside"
@@ -698,7 +698,7 @@
     --length-user-status-circle: 0.5714em;
     /* Shrink the user activity circle for the Recent Conversations context. */
     /* 7px at 14px/1em */
-    --length-user-status-circle-recent-conversations: 0.5em;
+    --length-user-status-circle-recent-conversations: var(--space-sm); /* 0.5em */
     --length-user-status-circle-popover-menu: 8px;
     --length-user-popover-menu-avatar: 64px;
 
@@ -712,7 +712,7 @@
     /* .display-type and .list-toggler-container
        in subscriptions and user group settings overlays */
     --settings-overlay-subheader-height: 3.1429em; /* 44px at 14px/em */
-    --settings-overlay-header-button-height: 2em;
+    --settings-overlay-header-button-height: var(--space-2xl); /* 2em */
     /* Informational overlay */
     --informational-overlay-max-width: 43.75em;
     --modal-input-width: 23.2142em;
@@ -783,8 +783,8 @@
     --inline-decorated-channel-name-padding-left: 0.0937em; /* 1.5px at 16px/em */
 
     /* Color picker popover values */
-    --size-color-swatch: 1em;
-    --grid-gap-color-swatch: 1em;
+    --size-color-swatch: var(--space-lg); /* 1em */
+    --grid-gap-color-swatch: var(--space-lg); /* 1em */
     --padding-color-swatch-list: 0.6666em;
     --gradient-custom-swatch: conic-gradient(
         from 0deg at 50% 50% in oklch longer hue,
@@ -806,11 +806,11 @@
     --popup-banner-translate-y-distance: 100px;
 
     /* Input grid layout variables */
-    --input-icon-starting-offset: 0.5em; /* 8px at 16px/1em */
-    --input-icon-width: 1em; /* 16px at 16px/1em */
+    --input-icon-starting-offset: var(--space-sm); /* 0.5em, 8px at 16px/1em */
+    --input-icon-width: var(--space-lg); /* 1em, 16px at 16px/1em */
     --input-icon-content-gap: 0.4375em; /* 7px at 16px/1em */
-    --input-button-content-gap: 0.25em; /* 4px at 16px/1em */
-    --input-button-width: 1.5em; /* 24px at 16px/1em */
+    --input-button-content-gap: var(--space-xs); /* 0.25em, 4px at 16px/1em */
+    --input-button-width: var(--space-xl); /* 1.5em, 24px at 16px/1em */
     --input-button-ending-offset: 0.125em; /* 2px at 16px/1em */
 
     /* Input padding and border variables */
@@ -1220,9 +1220,9 @@
 
     /* Recent view */
     --recent-view-max-avatars: 4;
-    --recent-view-participant-item-width: 1.5em; /* 24px at 16px / 1em */
+    --recent-view-participant-item-width: var(--space-xl); /* 1.5em, 24px at 16px / 1em */
     --recent-view-participant-item-padding-x: 0.0938em; /* 1.5px at 16px / 1em */
-    --recent-view-participants-padding-x-start: 0.25em; /* 4px at 16px / 1em */
+    --recent-view-participants-padding-x-start: var(--space-xs); /* 0.25em, 4px at 16px / 1em */
     --color-border-recent-view-row: light-dark(
         hsl(0deg 0% 87%),
         hsl(0deg 0% 0% / 20%)
