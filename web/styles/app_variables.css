@@ -1009,10 +1009,7 @@
         hsl(0deg 0% 100%),
         hsl(0deg 0% 0% / 20%)
     );
-    --color-unmuted-or-followed-topic-list-item: light-dark(
-        hsl(0deg 0% 20%),
-        hsl(236deg 33% 90%)
-    );
+    --color-unmuted-or-followed-topic-list-item: var(--text-default);
     --color-topic-indent-border: light-dark(
         hsl(0deg 0% 0% / 19%),
         hsl(0deg 0% 100% / 19%)
@@ -1158,10 +1155,7 @@
         hsl(0deg 0% 0% / 15%),
         hsl(0deg 0% 100% / 15%)
     );
-    --color-request-progress-status-alert-text: light-dark(
-        hsl(0deg 0% 20%),
-        hsl(236deg 33% 90%)
-    );
+    --color-request-progress-status-alert-text: var(--text-default);
     --color-background-tip: light-dark(
         hsl(46deg 63% 95%),
         hsl(46deg 28% 38% / 27%)
@@ -1536,10 +1530,7 @@
         hsl(0deg 0% 87% / 40%)
     );
     --color-text-message-header-archived: hsl(0deg 0% 50%);
-    --color-text-message-view-header: light-dark(
-        hsl(0deg 0% 20% / 100%),
-        hsl(0deg 0% 100% / 85%)
-    );
+    --color-text-message-view-header: var(--text-default);
     --color-text-message-header: light-dark(
         hsl(0deg 0% 15%),
         hsl(0deg 0% 100% / 85%)
@@ -1596,10 +1587,7 @@
         hsl(240deg 100% 15%),
         hsl(240deg 100% 90%)
     );
-    --color-text-sidebar-popover-menu: light-dark(
-        hsl(0deg 0% 20%),
-        hsl(236deg 33% 90%)
-    );
+    --color-text-sidebar-popover-menu: var(--text-default);
     --color-text-user-card-secondary: light-dark(
         var(--grey-600),
         var(--grey-400)
@@ -1635,10 +1623,7 @@
     );
 
     /* User Profile Modal */
-    --color-user-profile-field-name: light-dark(
-        hsl(0deg 0% 20%),
-        hsl(236deg 33% 90%)
-    );
+    --color-user-profile-field-name: var(--text-default);
     --color-border-user-profile-table: light-dark(
         hsl(0deg 0% 87%),
         hsl(0deg 0% 0% / 40%)
@@ -1773,10 +1758,7 @@
     --color-kbd-enter-sends: light-dark(hsl(0deg 0% 40%), hsl(236deg 33% 90%));
 
     /* Settings */
-    --color-realm-enable-spectator-access-link: light-dark(
-        hsl(0deg 0% 20%),
-        hsl(236deg 33% 90%)
-    );
+    --color-realm-enable-spectator-access-link: var(--text-default);
     --color-background-stream-email: light-dark(
         hsl(0deg 0% 98%),
         hsl(0deg 0% 0% / 20%)
