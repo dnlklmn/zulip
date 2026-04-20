@@ -1015,7 +1015,7 @@
         hsl(0deg 0% 100% / 19%)
     );
     --color-outline-focus: hsl(215deg 47% 50%);
-    --color-background-search: light-dark(hsl(0deg 0% 100%), hsl(0deg 0% 17%));
+    --color-background-search: var(--surface-float);
     --color-background-search-collapsed: var(--surface-float);
     --color-background-search-option-hover: light-dark(
         hsl(0deg 0% 94%),
@@ -1037,10 +1037,7 @@
         hsl(0deg 0% 100% / 10%)
     );
     --color-icon-purple: hsl(240deg 35% 60%);
-    --color-background-popover-menu: light-dark(
-        hsl(0deg 0% 100%),
-        hsl(0deg 0% 17%)
-    );
+    --color-background-popover-menu: var(--surface-float);
     --color-border-popover-menu-separator: light-dark(
         hsl(0deg 0% 0% / 10%),
         hsl(0deg 0% 0% / 40%)
@@ -1137,7 +1134,7 @@
         hsl(0deg 0% 100% / 35%),
         hsl(0deg 0% 100% / 3%)
     );
-    --color-background-popover: light-dark(hsl(0deg 0% 100%), hsl(0deg 0% 17%));
+    --color-background-popover: var(--surface-float);
     --color-background-alert-word: light-dark(
         hsl(18deg 100% 84%),
         hsl(22deg 70% 35%)
@@ -1636,10 +1633,7 @@
         hsl(0deg 0% 0% / 35%),
         hsl(0deg 0% 100% / 30%)
     );
-    --background-color-user-profile-list-container: light-dark(
-        hsl(0deg 0% 100%),
-        hsl(0deg 0% 17%)
-    );
+    --background-color-user-profile-list-container: var(--surface-float);
     --color-user-profile-list-item-hover: light-dark(
         hsl(0deg 0% 97%),
         hsl(0deg 0% 21%)
