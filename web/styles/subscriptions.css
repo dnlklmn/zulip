@@ -74,7 +74,7 @@
 .two-pane-settings-plus-button {
     font-weight: 400;
     position: relative;
-    border: 1px solid var(--color-border-settings-plus-button);
+    border: 1px solid var(--border-default);
     border-radius: 5px;
     background-color: var(--color-background-settings-plus-button);
     color: var(--color-text-settings-plus-button);

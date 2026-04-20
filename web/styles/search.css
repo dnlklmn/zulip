@@ -79,7 +79,7 @@
 
     .navbar-search:not(.expanded) {
         right: 0;
-        background-color: var(--color-background-search-collapsed);
+        background-color: var(--surface-float);
 
         .search_close_button {
             display: none;

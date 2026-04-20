@@ -1,3 +1,44 @@
+:root {
+    /* Left sidebar box shadows (nested simplebar stack) */
+    --color-left-sidebar-direct-messages-bottom-divider: light-dark(
+        hsl(0deg 0% 0% / 15%),
+        hsl(0deg 0% 100% / 15%)
+    );
+    --color-left-sidebar-inner-box-shadow: light-dark(
+        hsl(0deg 0% 0% / 20%),
+        hsl(0deg 0% 0% / 80%)
+    );
+    --color-left-sidebar-middle-box-shadow: var(--color-background);
+    --color-left-sidebar-outer-box-shadow: light-dark(
+        hsl(0deg 0% 94% / 20%),
+        hsl(0deg 0% 11% / 30%)
+    );
+    --color-left-sidebar-middle-box-shadow-hover: light-dark(
+        hsl(244deg 36% 91%),
+        hsl(240deg 19% 24%)
+    );
+    --color-left-sidebar-outer-box-shadow-hover: light-dark(
+        hsl(240deg 100% 50% / 7%),
+        hsl(240deg 100% 75% / 20%)
+    );
+
+    /* Left sidebar icons */
+    --color-left-sidebar-follow-icon-hover: light-dark(
+        hsl(0deg 0% 0%),
+        hsl(0deg 0% 100%)
+    );
+    /* The gray on the filter icons is the same as
+       what's set on ul.filters, but with 70% opacity. */
+    --color-left-sidebar-navigation-icon: light-dark(
+        hsl(240deg 30% 40%),
+        hsl(240deg 35% 68%)
+    );
+    --color-left-sidebar-dm-partners-icon: light-dark(
+        hsl(240deg 30% 60%),
+        hsl(240deg 35% 58%)
+    );
+}
+
 .left-sidebar-title {
     color: var(--color-text-sidebar-heading);
     opacity: var(--opacity-sidebar-heading);
@@ -1077,7 +1118,7 @@ ul.filters {
         }
 
         & li.unmuted_or_followed_topic {
-            color: var(--color-unmuted-or-followed-topic-list-item);
+            color: var(--text-default);
 
             .unread_count {
                 opacity: 1;

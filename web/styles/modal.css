@@ -224,7 +224,7 @@
 
 .dialog_submit_button {
     margin-left: 12px;
-    background-color: hsl(240deg 96% 68%);
+    background-color: var(--accent);
     color: hsl(0deg 0% 100%) !important;
 }
 
@@ -242,7 +242,7 @@
     }
 
     .name {
-        color: var(--color-user-profile-field-name);
+        color: var(--text-default);
         font-weight: 600;
         margin-right: 10px;
         overflow-wrap: break-word;
@@ -490,7 +490,7 @@
 #user-profile-modal .stream-list-container,
 #edit_channel_folder .stream-list-container {
     border-radius: 4px;
-    background-color: var(--background-color-user-profile-list-container);
+    background-color: var(--surface-float);
     border: 1px solid var(--color-border-user-profile-list-container);
     padding: 0.25em 0.25em 0;
     margin-bottom: 5px;
