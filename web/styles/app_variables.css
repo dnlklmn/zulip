@@ -929,10 +929,7 @@
     --color-background-sidebar-action-heading-hover: var(
         --color-background-navigation-item-hover
     );
-    --color-navbar-bottom-border: light-dark(
-        hsl(0deg 0% 80%),
-        hsl(0deg 0% 0% / 60%)
-    );
+    --color-navbar-bottom-border: var(--border-default);
     --color-left-sidebar-direct-messages-bottom-divider: light-dark(
         hsl(0deg 0% 0% / 15%),
         hsl(0deg 0% 100% / 15%)
@@ -1366,10 +1363,7 @@
         var(--color-compose-collapsed-reply-button-area-background),
         hsl(0deg 0% 0% / 15%)
     );
-    --color-compose-collapsed-reply-button-area-border: light-dark(
-        hsl(0deg 0% 80%),
-        hsl(0deg 0% 0% / 60%)
-    );
+    --color-compose-collapsed-reply-button-area-border: var(--border-default);
     --color-compose-collapsed-reply-button-area-border-interactive: light-dark(
         hsl(0deg 0% 60%),
         var(--color-compose-collapsed-reply-button-area-border)
@@ -1403,10 +1397,7 @@
         hsl(0deg 0% 95%),
         hsl(0deg 0% 0% / 20%)
     );
-    --color-border-compose-new-message-button: light-dark(
-        hsl(0deg 0% 80%),
-        hsl(0deg 0% 0% / 60%)
-    );
+    --color-border-compose-new-message-button: var(--border-default);
     --color-border-compose-new-message-button-hover: light-dark(
         hsl(0deg 0% 60%),
         hsl(0deg 0% 0% / 60%)
@@ -1617,10 +1608,7 @@
         hsl(0deg 0% 100%),
         hsl(0deg 0% 0% / 20%)
     );
-    --color-border-settings-plus-button: light-dark(
-        hsl(0deg 0% 80%),
-        hsl(0deg 0% 0% / 60%)
-    );
+    --color-border-settings-plus-button: var(--border-default);
 
     /* User Profile Modal */
     --color-user-profile-field-name: var(--text-default);
@@ -1683,10 +1671,7 @@
         hsl(0deg 0% 0% / 40%),
         hsl(0deg 0% 0%)
     );
-    --color-border-dropdown-widget-button: light-dark(
-        hsl(0deg 0% 80%),
-        hsl(0deg 0% 0% / 60%)
-    );
+    --color-border-dropdown-widget-button: var(--border-default);
     --color-background-dropdown-widget-button: light-dark(
         hsl(0deg 0% 100%),
         hsl(0deg 0% 0% / 20%)
@@ -1791,10 +1776,7 @@
         hsl(0deg 0% 53%),
         hsl(0deg 0% 0% / 50%)
     );
-    --color-border-tab-switcher-ind-tab: light-dark(
-        hsl(0deg 0% 80%),
-        hsl(0deg 0% 0% / 60%)
-    );
+    --color-border-tab-switcher-ind-tab: var(--border-default);
     --color-border-tab-switcher-ind-tab-selected: light-dark(
         hsl(0deg 0% 47%),
         hsl(0deg 0% 0% / 90%)
@@ -1978,10 +1960,7 @@
     --color-copy-button-success: var(--success);
 
     /* Reaction container colors */
-    --color-message-reaction-border: light-dark(
-        hsl(0deg 0% 0% / 10%),
-        hsl(0deg 0% 100% / 15%)
-    );
+    --color-message-reaction-border: var(--border-hint);
     --color-message-reaction-border-reacted: light-dark(
         hsl(0deg 0% 0% / 45%),
         hsl(0deg 0% 100% / 70%)
@@ -2342,10 +2321,7 @@
         hsl(0deg 0% 93%),
         var(--color-background-zulip-button)
     );
-    --color-border-zulip-button: light-dark(
-        hsl(0deg 0% 80%),
-        hsl(0deg 0% 0% / 60%)
-    );
+    --color-border-zulip-button: var(--border-default);
     --color-border-zulip-button-interactive: light-dark(
         hsl(0deg 0% 60%),
         var(--color-border-zulip-button)
@@ -2951,10 +2927,7 @@
         hsl(0deg 0% 100%),
         hsl(0deg 0% 0% / 20%)
     );
-    --color-border-legacy-input: light-dark(
-        hsl(0deg 0% 80%),
-        hsl(0deg 0% 0% / 60%)
-    );
+    --color-border-legacy-input: var(--border-default);
     --color-border-legacy-input-focus: light-dark(
         hsl(206deg 80% 62% / 80%),
         hsl(0deg 0% 0% / 90%)
