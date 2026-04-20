@@ -117,11 +117,14 @@
        a semantic token.
        ============================================================ */
 
-    /* Borders — solid. Use alpha borders inline where a border
-       must read correctly over varied backgrounds. */
-    --border-hint: light-dark(var(--grey-200), var(--grey-800));
-    --border-default: light-dark(var(--grey-300), var(--grey-700));
-    --border-emphasized: light-dark(var(--grey-500), var(--grey-500));
+    /* Borders. Light values are solid greys from the scale;
+       dark values use alpha on black/white so the border reads
+       correctly on varied background surfaces (canvas, popover,
+       modal). These alpha values match the pattern already
+       dominant in the codebase. */
+    --border-hint: light-dark(hsl(0deg 0% 0% / 10%), hsl(0deg 0% 100% / 15%));
+    --border-default: light-dark(var(--grey-200), hsl(0deg 0% 0% / 60%));
+    --border-emphasized: light-dark(var(--grey-400), hsl(0deg 0% 100% / 40%));
 
     /* Surfaces — default is the app canvas; float is raised
        (popovers, cards, modals); dip is recessed. */
