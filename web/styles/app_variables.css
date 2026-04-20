@@ -1,166 +1,102 @@
 :root {
-    /* Zulip color palette */
+    /* Zulip color palette. 11-step scales (50 = lightest, 950 = darkest).
+       Greys and cool greys follow a linear HSL formula with ΔL=9.
+       Accent scales (brand, blue, green, orange, red) are hand-tuned hex. */
+
+    /* grey — pure neutral */
+    --grey-50: hsl(0deg 0% 95%);
+    --grey-100: hsl(0deg 0% 86%);
+    --grey-200: hsl(0deg 0% 77%);
+    --grey-300: hsl(0deg 0% 68%);
+    --grey-400: hsl(0deg 0% 59%);
+    --grey-500: hsl(0deg 0% 50%);
+    --grey-600: hsl(0deg 0% 41%);
+    --grey-700: hsl(0deg 0% 32%);
+    --grey-800: hsl(0deg 0% 23%);
+    --grey-900: hsl(0deg 0% 14%);
+    --grey-950: hsl(0deg 0% 5%);
+
+    /* cool — blue-tinted neutral, for a small set of dark-mode
+       surfaces that historically carried a subtle blue tint */
+    --cool-50: hsl(230deg 10% 95%);
+    --cool-100: hsl(230deg 10% 86%);
+    --cool-200: hsl(230deg 10% 77%);
+    --cool-300: hsl(230deg 10% 68%);
+    --cool-400: hsl(230deg 10% 59%);
+    --cool-500: hsl(230deg 10% 50%);
+    --cool-600: hsl(230deg 10% 41%);
+    --cool-700: hsl(230deg 10% 32%);
+    --cool-800: hsl(230deg 10% 23%);
+    --cool-900: hsl(230deg 10% 14%);
+    --cool-950: hsl(230deg 10% 5%);
+
     /* stylelint-disable color-no-hex */
-    /* grey */
-    --grey-0: #f7f8fc;
-    --grey-50: #f2f3f7;
-    --grey-100: #e9ebf2;
-    --grey-150: #dfe1e8;
-    --grey-200: #cbcdd6;
-    --grey-250: #bbbdc8;
-    --grey-300: #aaadba;
-    --grey-350: #9ea1ae;
-    --grey-400: #9194a3;
-    --grey-450: #858897;
-    --grey-500: #767988;
-    --grey-550: #626573;
-    --grey-600: #535663;
-    --grey-650: #444754;
-    --grey-700: #393c49;
-    --grey-750: #2d303c;
-    --grey-800: #242631;
-    --grey-850: #181a25;
-    --grey-900: #11131e;
-    --grey-950: #0a0c17;
-    --grey-1000: #070812;
 
-    /* purple */
-    --purple-0: #f3f2fd;
-    --purple-50: #ededfc;
-    --purple-100: #e5e5fc;
-    --purple-150: #dbdaff;
-    --purple-200: #c9c7fd;
-    --purple-250: #b8b4ff;
-    --purple-300: #aba5fd;
-    --purple-350: #9e94fd;
-    --purple-400: #9283fd;
-    --purple-450: #8a70fc;
-    --purple-500: #7f63ee;
-    --purple-550: #7153dc;
-    --purple-600: #5f3cc5;
-    --purple-650: #522ab4;
-    --purple-700: #4615a3;
-    --purple-750: #370386;
-    --purple-800: #2c0070;
-    --purple-850: #200154;
-    --purple-900: #13013a;
-    --purple-950: #0d002c;
-    --purple-1000: #070020;
-
-    /* violet */
-    --violet-0: #f1f3fe;
-    --violet-50: #eceefc;
-    --violet-100: #e3e6fd;
-    --violet-150: #d8dcfc;
-    --violet-200: #c3c9fe;
-    --violet-250: #b1b7fe;
-    --violet-300: #a3a9fc;
-    --violet-350: #9398fd;
-    --violet-400: #8688fd;
-    --violet-450: #7977fe;
-    --violet-500: #6e69f3;
-    --violet-550: #6159e1;
-    --violet-600: #4f42c9;
-    --violet-650: #4331b8;
-    --violet-700: #381da7;
-    --violet-750: #2b0e8a;
-    --violet-800: #230773;
-    --violet-850: #180557;
-    --violet-900: #0e033c;
-    --violet-950: #08012e;
-    --violet-1000: #050121;
+    /* brand — anchored on brand-500 = hsl(240 96% 68%),
+       the primary Zulip action/button color */
+    --brand-50: #f0f0ff;
+    --brand-100: #e3e3fe;
+    --brand-200: #c6c6fd;
+    --brand-300: #a8a8fc;
+    --brand-400: #8080fd;
+    --brand-500: #5f5ffc;
+    --brand-600: #4a4ae8;
+    --brand-700: #3a3ac9;
+    --brand-800: #2e2ea3;
+    --brand-900: #22227d;
+    --brand-950: #161658;
 
     /* blue */
-    --blue-0: #eff3fe;
     --blue-50: #e5edfe;
     --blue-100: #dae5fd;
-    --blue-150: #cbdbfd;
     --blue-200: #b4cafd;
-    --blue-250: #97b6fe;
     --blue-300: #84a8fd;
-    --blue-350: #7199fe;
     --blue-400: #5f8bfc;
-    --blue-450: #4d7bfd;
     --blue-500: #406ef6;
-    --blue-550: #325ce3;
     --blue-600: #2145cb;
-    --blue-650: #1633b9;
     --blue-700: #0f23ac;
-    --blue-750: #0a089b;
     --blue-800: #06037c;
-    --blue-850: #03025c;
     --blue-900: #020145;
     --blue-950: #010034;
-    --blue-1000: #010024;
 
     /* green */
-    --green-0: #ebffee;
     --green-50: #d0fed8;
     --green-100: #b4ffc3;
-    --green-150: #a3f9b5;
     --green-200: #82e89a;
-    --green-250: #6bd586;
     --green-300: #57c273;
-    --green-350: #41ae61;
     --green-400: #2f9f52;
-    --green-450: #158f44;
     --green-500: #07833c;
-    --green-550: #087736;
     --green-600: #09672e;
-    --green-650: #035926;
     --green-700: #054f22;
-    --green-750: #05401b;
     --green-800: #013112;
-    --green-850: #03260e;
     --green-900: #001d07;
     --green-950: #011505;
-    --green-1000: #010d03;
 
     /* orange */
-    --orange-0: #fef4e3;
     --orange-50: #ffeccd;
     --orange-100: #ffda9b;
-    --orange-150: #fecb6f;
     --orange-200: #febe3d;
-    --orange-250: #f8b325;
     --orange-300: #eba002;
-    --orange-350: #db920d;
     --orange-400: #c8850d;
-    --orange-450: #ba7401;
     --orange-500: #a96a05;
-    --orange-550: #9c5c00;
     --orange-600: #88520c;
-    --orange-650: #764607;
     --orange-700: #623b0c;
-    --orange-750: #4f2e06;
     --orange-800: #3f2404;
-    --orange-850: #321c04;
     --orange-900: #291602;
     --orange-950: #200f01;
-    --orange-1000: #180c03;
 
     /* red */
-    --red-0: #fcf3f2;
     --red-50: #ffe4e0;
     --red-100: #ffd4cd;
-    --red-150: #ffbfb5;
     --red-200: #fea497;
-    --red-250: #ff8b7c;
     --red-300: #fd7465;
-    --red-350: #fd5f50;
     --red-400: #f34c3e;
-    --red-450: #e1392e;
     --red-500: #d22720;
-    --red-550: #c0070a;
     --red-600: #ac0508;
-    --red-650: #960708;
     --red-700: #7c0203;
-    --red-750: #650102;
     --red-800: #4f0001;
-    --red-850: #400101;
     --red-900: #330201;
     --red-950: #280100;
-    --red-1000: #1a0200;
 
     color-scheme: light;
 
@@ -1544,7 +1480,7 @@
         hsl(236deg 33% 90%)
     );
     --color-text-user-card-secondary: light-dark(
-        var(--grey-550),
+        var(--grey-600),
         var(--grey-400)
     );
     --color-text-url: hsl(200deg 100% 40%);
@@ -1917,35 +1853,27 @@
         var(--color-background) 100%
     );
     --color-copy-button: light-dark(
-        /* hsl(229deg 9% 36%) corresponds to --grey-600.
-           We use the hsl() equivalent directly since postcss-color-mix-function
-           cannot dynamically resolve var() arguments. */
+        /* Inline hsl() values here and below are required because
+           postcss-color-mix-function cannot resolve var() arguments. */
             color-mix(in oklch, hsl(229deg 9% 36%) 70%, transparent),
-        /* hsl(229deg 10% 70%) corresponds to --grey-400. */
             color-mix(in oklch, hsl(229deg 10% 70%) 70%, transparent)
     );
     --color-copy-button-hover: light-dark(var(--grey-600), var(--grey-300));
     --color-copy-button-square-bg-hover: light-dark(
-        /* --grey-600, opacity 0.07 */
-            color-mix(in oklch, hsl(229deg 9% 36%) 7%, transparent),
-        /* --grey-400, opacity 0.14 */
-            color-mix(in oklch, hsl(230deg 9% 60%) 14%, transparent)
+        color-mix(in oklch, hsl(229deg 9% 36%) 7%, transparent),
+        color-mix(in oklch, hsl(230deg 9% 60%) 14%, transparent)
     );
     --color-copy-button-active: light-dark(
-        /* --grey-600, opacity 0.7 */
-            color-mix(in oklch, hsl(229deg 9% 36%) 70%, transparent),
-        /* --grey-300, opacity 0.7 */
-            color-mix(in oklch, hsl(229deg 10% 70%) 70%, transparent)
+        color-mix(in oklch, hsl(229deg 9% 36%) 70%, transparent),
+        color-mix(in oklch, hsl(229deg 10% 70%) 70%, transparent)
     );
     --color-copy-button-square-active: light-dark(
         var(--grey-600),
         var(--grey-300)
     );
     --color-copy-button-square-bg-active: light-dark(
-        /* --grey-600, opacity 0.11 */
-            color-mix(in oklch, hsl(229deg 9% 36%) 11%, transparent),
-        /* --grey-400, opacity 0.18 */
-            color-mix(in oklch, hsl(229deg 9% 60%) 18%, transparent)
+        color-mix(in oklch, hsl(229deg 9% 36%) 11%, transparent),
+        color-mix(in oklch, hsl(229deg 9% 60%) 18%, transparent)
     );
     --color-copy-button-success: light-dark(var(--green-500), var(--green-300));
 
@@ -2392,12 +2320,12 @@
     );
     --background-color-current-setting-dropdown-item: color-mix(
         in srgb,
-        var(--purple-500) 13%,
+        var(--brand-500) 13%,
         transparent
     );
     --color-current-setting-dropdown-item: light-dark(
-        var(--purple-700),
-        var(--purple-300)
+        var(--brand-700),
+        var(--brand-300)
     );
     --background-color-active-typeahead-item: light-dark(
         hsl(220deg 12% 4.9% / 5%),
