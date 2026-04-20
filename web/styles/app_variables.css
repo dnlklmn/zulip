@@ -929,7 +929,6 @@
     --color-background-sidebar-action-heading-hover: var(
         --color-background-navigation-item-hover
     );
-    --color-navbar-bottom-border: var(--border-default);
     --color-unread-marker: hsl(217deg 64% 59%);
     --color-masked-unread-marker: light-dark(
         hsl(0deg 0% 80%),
@@ -988,14 +987,12 @@
         hsl(0deg 0% 100%),
         hsl(0deg 0% 0% / 20%)
     );
-    --color-unmuted-or-followed-topic-list-item: var(--text-default);
     --color-topic-indent-border: light-dark(
         hsl(0deg 0% 0% / 19%),
         hsl(0deg 0% 100% / 19%)
     );
     --color-outline-focus: hsl(215deg 47% 50%);
     --color-background-search: var(--surface-float);
-    --color-background-search-collapsed: var(--surface-float);
     --color-background-search-option-hover: light-dark(
         hsl(0deg 0% 94%),
         hsl(0deg 0% 20%)
@@ -1131,7 +1128,6 @@
         hsl(0deg 0% 0% / 15%),
         hsl(0deg 0% 100% / 15%)
     );
-    --color-request-progress-status-alert-text: var(--text-default);
     --color-background-tip: light-dark(
         hsl(46deg 63% 95%),
         hsl(46deg 28% 38% / 27%)
@@ -1149,7 +1145,6 @@
         hsl(0deg 0% 0%),
         hsl(0deg 0% 100%)
     );
-    --color-background-animated-button-hover: var(--accent);
     --color-invalid-input-border: light-dark(
         hsl(3deg 57% 33%),
         hsl(3deg 73% 74%)
@@ -1197,7 +1192,6 @@
         hsl(0deg 0% 87% / 40%)
     );
     --color-text-message-header-archived: hsl(0deg 0% 50%);
-    --color-text-message-view-header: var(--text-default);
     --color-text-message-header: light-dark(
         hsl(0deg 0% 15%),
         hsl(0deg 0% 100% / 85%)
@@ -1254,7 +1248,6 @@
         hsl(240deg 100% 15%),
         hsl(240deg 100% 90%)
     );
-    --color-text-sidebar-popover-menu: var(--text-default);
     --color-text-user-card-secondary: light-dark(
         var(--grey-600),
         var(--grey-400)
@@ -1284,10 +1277,8 @@
         hsl(0deg 0% 100%),
         hsl(0deg 0% 0% / 20%)
     );
-    --color-border-settings-plus-button: var(--border-default);
 
     /* User Profile Modal */
-    --color-user-profile-field-name: var(--text-default);
     --color-border-user-profile-table: light-dark(
         hsl(0deg 0% 87%),
         hsl(0deg 0% 0% / 40%)
@@ -1300,7 +1291,6 @@
         hsl(0deg 0% 0% / 35%),
         hsl(0deg 0% 100% / 30%)
     );
-    --background-color-user-profile-list-container: var(--surface-float);
     --color-user-profile-list-item-hover: light-dark(
         hsl(0deg 0% 97%),
         hsl(0deg 0% 21%)
@@ -1347,7 +1337,6 @@
         hsl(0deg 0% 0% / 40%),
         hsl(0deg 0% 0%)
     );
-    --color-border-dropdown-widget-button: var(--border-default);
     --color-background-dropdown-widget-button: light-dark(
         hsl(0deg 0% 100%),
         hsl(0deg 0% 0% / 20%)
@@ -1416,7 +1405,6 @@
     --color-kbd-enter-sends: light-dark(hsl(0deg 0% 40%), hsl(236deg 33% 90%));
 
     /* Settings */
-    --color-realm-enable-spectator-access-link: var(--text-default);
     --color-background-stream-email: light-dark(
         hsl(0deg 0% 98%),
         hsl(0deg 0% 0% / 20%)
@@ -1452,7 +1440,6 @@
         hsl(0deg 0% 53%),
         hsl(0deg 0% 0% / 50%)
     );
-    --color-border-tab-switcher-ind-tab: var(--border-default);
     --color-border-tab-switcher-ind-tab-selected: light-dark(
         hsl(0deg 0% 47%),
         hsl(0deg 0% 0% / 90%)
@@ -1622,7 +1609,6 @@
     --color-copy-button-success: var(--success);
 
     /* Reaction container colors */
-    --color-message-reaction-border: var(--border-hint);
     --color-message-reaction-border-reacted: light-dark(
         hsl(0deg 0% 0% / 45%),
         hsl(0deg 0% 100% / 70%)
@@ -1665,9 +1651,7 @@
         var(--color-message-reaction-background-hover)
     );
     --color-message-reaction-button-border: transparent;
-    --color-message-reaction-button-border-hover: var(
-        --color-message-reaction-border
-    );
+    --color-message-reaction-button-border-hover: var(--border-hint);
     --font-weight-message-reaction: 600;
 
     /* Message feed loading indicator colors */

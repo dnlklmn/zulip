@@ -152,7 +152,7 @@ textarea::-webkit-resizer {
         }
 
         &:not(.selected) {
-            border: 1px solid var(--color-border-tab-switcher-ind-tab);
+            border: 1px solid var(--border-default);
         }
 
         &.first {
@@ -564,7 +564,7 @@ input.settings_text_input {
 
     &:hover {
         cursor: pointer;
-        background-color: var(--color-background-animated-button-hover);
+        background-color: var(--accent);
         color: hsl(0deg 0% 100%);
 
         .color-animated-button-text {
@@ -1008,7 +1008,7 @@ div.overlay .flex.overlay-content > .overlay-container,
 .dropdown-widget-button {
     background-color: var(--color-background-dropdown-widget-button);
     padding: 4px 6px;
-    border: 1px solid var(--color-border-dropdown-widget-button);
+    border: 1px solid var(--border-default);
     border-radius: 4px;
     display: flex;
     align-items: center;

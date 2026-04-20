@@ -1118,7 +1118,7 @@ ul.filters {
         }
 
         & li.unmuted_or_followed_topic {
-            color: var(--color-unmuted-or-followed-topic-list-item);
+            color: var(--text-default);
 
             .unread_count {
                 opacity: 1;

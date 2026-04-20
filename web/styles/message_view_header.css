@@ -1,5 +1,5 @@
 #message_view_header {
-    color: var(--color-text-message-view-header);
+    color: var(--text-default);
     z-index: 2;
     float: left;
     height: var(--header-height);
