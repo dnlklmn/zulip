@@ -167,6 +167,46 @@
         hsl(185deg 20% 20%)
     );
 
+    /* ============================================================
+       Spacing scale.
+
+       em-based so spacing inherits proportionally through
+       font-size contexts (Zulip's convention per CLAUDE.md).
+       Numeric names follow Tailwind's scheme: N = N × 0.25em,
+       which at a 16px base corresponds 1:1 with Tailwind's
+       N × 0.25rem (e.g. --space-3 ≈ 12px, --space-4 = 1em ≈ 16px,
+       --space-6 ≈ 24px).
+
+       The px value noted in each comment is the *approximate*
+       rendered size at a 16px parent font-size. Actual rendered
+       size scales with the using element's font-size.
+       ============================================================ */
+
+    /* Primitives */
+    --space-0: 0;
+    --space-px: 1px; /* hairline — px deliberate, does not scale */
+    --space-0-5: 0.125em; /* ~2px  */
+    --space-1: 0.25em; /* ~4px  */
+    --space-1-5: 0.375em; /* ~6px  */
+    --space-2: 0.5em; /* ~8px  */
+    --space-2-5: 0.625em; /* ~10px */
+    --space-3: 0.75em; /* ~12px */
+    --space-4: 1em; /* ~16px */
+    --space-5: 1.25em; /* ~20px */
+    --space-6: 1.5em; /* ~24px */
+    --space-8: 2em; /* ~32px */
+    --space-10: 2.5em; /* ~40px */
+    --space-12: 3em; /* ~48px */
+    --space-16: 4em; /* ~64px */
+
+    /* Semantic */
+    --space-xs: var(--space-1); /* 0.25em ≈ 4px  */
+    --space-sm: var(--space-2); /* 0.5em  ≈ 8px  */
+    --space-md: var(--space-3); /* 0.75em ≈ 12px */
+    --space-lg: var(--space-4); /* 1em    ≈ 16px */
+    --space-xl: var(--space-6); /* 1.5em  ≈ 24px */
+    --space-2xl: var(--space-8); /* 2em    ≈ 32px */
+
     color-scheme: light;
 
     /* Variable for setting the viewport to full height.
