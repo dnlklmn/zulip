@@ -98,6 +98,70 @@
     --red-900: #330201;
     --red-950: #280100;
 
+    /* ============================================================
+       Semantic tokens.
+
+       These tokens sit between the primitive scales above and the
+       component-level --color-* tokens below. They are the only
+       tier that uses light-dark() to pair theme values; component
+       tokens reference these semantic ones and do not need their
+       own light/dark pairs.
+
+       If you are reaching for a raw hsl()/hex literal in a
+       component, check here first — most UI roles already have
+       a semantic token.
+       ============================================================ */
+
+    /* Borders — solid. Use alpha borders inline where a border
+       must read correctly over varied backgrounds. */
+    --border-hint: light-dark(var(--grey-200), var(--grey-800));
+    --border-default: light-dark(var(--grey-300), var(--grey-700));
+    --border-emphasized: light-dark(var(--grey-500), var(--grey-500));
+
+    /* Surfaces — default is the app canvas; float is raised
+       (popovers, cards, modals); dip is recessed. */
+    --surface-default: light-dark(var(--grey-50), var(--grey-900));
+    --surface-float: light-dark(hsl(0deg 0% 100%), var(--grey-800));
+    --surface-dip: light-dark(var(--grey-100), var(--grey-950));
+
+    /* Text */
+    --text-default: light-dark(var(--grey-800), var(--grey-100));
+    --text-dim: light-dark(var(--grey-500), var(--grey-400));
+    --text-disabled: light-dark(var(--grey-400), var(--grey-600));
+    --text-emphasized: light-dark(var(--grey-950), hsl(0deg 0% 100%));
+
+    /* Focus ring */
+    --focus-ring: var(--brand-500);
+
+    /* Accent (primary interactive color — Zulip brand blue) */
+    --accent: var(--brand-500);
+    --accent-hover: var(--brand-600);
+    --accent-subtle: light-dark(var(--brand-100), var(--brand-900));
+
+    /* Semantic states */
+    --danger: light-dark(var(--red-600), var(--red-400));
+    --danger-subtle: light-dark(var(--red-50), var(--red-900));
+    --warning: light-dark(var(--orange-500), var(--orange-300));
+    --warning-subtle: light-dark(var(--orange-50), var(--orange-900));
+    --success: light-dark(var(--green-500), var(--green-300));
+    --success-subtle: light-dark(var(--green-50), var(--green-900));
+
+    /* Feature tints. These carry identity for specific parts of
+       the product (direct messages, tips, group mentions, embedded
+       widgets) and do not bottom out in the neutral/brand scales. */
+    --surface-dm: light-dark(hsl(45deg 20% 96%), hsl(46deg 7% 16%));
+    --surface-dm-header: light-dark(hsl(46deg 35% 93%), hsl(46deg 15% 20%));
+    --surface-tip: light-dark(hsl(46deg 63% 95%), hsl(46deg 28% 38% / 27%));
+    --border-tip: light-dark(hsl(49deg 20% 84%), hsl(49deg 38% 46%));
+    --surface-group-mention: light-dark(
+        hsl(180deg 40% 94%),
+        hsl(180deg 13% 14%)
+    );
+    --surface-widget-action: light-dark(
+        hsl(0deg 0% 100%),
+        hsl(185deg 20% 20%)
+    );
+
     color-scheme: light;
 
     /* Variable for setting the viewport to full height.
