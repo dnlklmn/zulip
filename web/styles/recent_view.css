@@ -1,3 +1,103 @@
+:root {
+    /* Layout */
+    --recent-view-max-avatars: 4;
+    --recent-view-participant-item-width: var(--space-xl); /* 1.5em, 24px at 16px/1em */
+    --recent-view-participant-item-padding-x: 0.0938em; /* 1.5px at 16px/1em */
+    --recent-view-participants-padding-x-start: var(--space-xs); /* 0.25em, 4px at 16px/1em */
+
+    /* Row / table colors */
+    --color-border-recent-view-row: light-dark(
+        hsl(0deg 0% 87%),
+        hsl(0deg 0% 0% / 20%)
+    );
+    --color-border-recent-view-table: light-dark(
+        hsl(0deg 0% 0% / 10%),
+        hsl(0deg 0% 0% / 10%)
+    );
+    --color-background-recent-view-row: light-dark(
+        hsl(0deg 0% 100%),
+        hsl(0deg 0% 11%)
+    );
+    --color-background-recent-view-row-hover: light-dark(
+        color-mix(in srgb, hsl(0deg 0% 0%) 5%, hsl(0deg 0% 100%)),
+        color-mix(in srgb, hsl(0deg 0% 100%) 5%, hsl(0deg 0% 11%))
+    );
+    --color-background-recent-view-unread-row: var(
+        --color-background-recent-view-row
+    );
+    --color-background-recent-view-unread-row-hover: var(
+        --color-background-recent-view-row-hover
+    );
+
+    /* Link text colors */
+    --color-recent-view-link-unread: light-dark(
+        hsl(0deg 0% 5%),
+        hsl(0deg 0% 100% / 83%)
+    );
+    --color-recent-view-link: light-dark(
+        hsl(0deg 0% 20%),
+        hsl(0deg 0% 100% / 75%)
+    );
+
+    /* Filter button colors */
+    --color-background-recent-filters-button-focus: light-dark(
+        hsl(0deg 0% 80%),
+        hsl(0deg 0% 0% / 50%)
+    );
+    --color-background-recent-filters-button-disabled: light-dark(
+        hsl(0deg 0% 100%),
+        hsl(0deg 0% 0% / 50%)
+    );
+    --color-border-recent-filters-button-disabled: light-dark(
+        hsl(0deg 0% 80%),
+        hsl(0deg 0% 0%)
+    );
+
+    /* Participant overflow */
+    --color-recent-view-participant-overflow-text: light-dark(
+        hsl(0deg 0% 0%),
+        hsl(0deg 0% 100%)
+    );
+    --color-background-recent-view-participant-overflow: light-dark(
+        hsl(0deg 0% 88%),
+        hsl(211deg 18% 25%)
+    );
+
+    /* Table head */
+    --color-background-recent-view-table-thead-th: light-dark(
+        hsl(0deg 0% 97%),
+        hsl(0deg 0% 16%)
+    );
+    --color-background-recent-view-table-thead-sort-header: light-dark(
+        hsl(229deg 9% 36% / 7%),
+        hsl(230deg 9% 60% / 14%)
+    );
+    --color-text-recent-view-table-thead-th: light-dark(
+        var(--grey-600),
+        var(--grey-300)
+    );
+    --color-arrow-recent-view-table-thead-th: light-dark(
+        hsl(229deg 9% 36% / 50%),
+        hsl(229deg 10% 70% / 50%)
+    );
+
+    /* Last message time */
+    --color-text-recent-view-last-msg-time: light-dark(
+        hsl(0deg 0% 15% / 75%),
+        hsl(0deg 0% 100% / 50%)
+    );
+    --color-text-recent-view-last-msg-time-unread: light-dark(
+        hsl(0deg 0% 0% / 75%),
+        hsl(0deg 0% 100% / 58%)
+    );
+
+    /* Loading spinner */
+    --color-recent-view-loading-spinner: light-dark(
+        hsl(0deg 0% 27%),
+        hsl(0deg 0% 100% / 60%)
+    );
+}
+
 .recent_view_container {
     padding: 0;
     overflow: hidden;
