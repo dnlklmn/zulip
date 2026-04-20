@@ -1022,10 +1022,7 @@
     );
     --color-outline-focus: hsl(215deg 47% 50%);
     --color-background-search: light-dark(hsl(0deg 0% 100%), hsl(0deg 0% 17%));
-    --color-background-search-collapsed: light-dark(
-        hsl(0deg 0% 100%),
-        hsl(0deg 0% 20%)
-    );
+    --color-background-search-collapsed: var(--surface-float);
     --color-background-search-option-hover: light-dark(
         hsl(0deg 0% 94%),
         hsl(0deg 0% 20%)
