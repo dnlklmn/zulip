@@ -880,7 +880,7 @@
         hsl(0deg 0% 0%),
         hsl(0deg 0% 100%)
     );
-    --color-background: light-dark(hsl(0deg 0% 94%), hsl(0deg 0% 11%));
+    --color-background: var(--surface-default);
     --color-background-widget-input: light-dark(
         hsl(0deg 0% 100%),
         hsl(225deg 6% 10%)
@@ -1185,7 +1185,7 @@
         hsl(0deg 0% 0%),
         hsl(0deg 0% 100%)
     );
-    --color-background-animated-button-hover: hsl(240deg 96% 68%);
+    --color-background-animated-button-hover: var(--accent);
     --color-invalid-input-border: light-dark(
         hsl(3deg 57% 33%),
         hsl(3deg 73% 74%)
@@ -1199,7 +1199,7 @@
         hsl(0deg 0% 100%),
         hsl(0deg 0% 0% / 20%)
     );
-    --color-stream-group-row-checked-icon: hsl(240deg 96% 68%);
+    --color-stream-group-row-checked-icon: var(--accent);
     --color-stream-group-row-checked-icon-hover: hsl(240deg 41% 50%);
     --color-stream-group-row-checked-icon-disabled: light-dark(
         hsl(240deg 96% 68% / 100%),
@@ -1324,7 +1324,7 @@
         hsl(0deg 0% 0% / 40%)
     );
     --color-compose-send-button-icon-color: hsl(0deg 0% 100%);
-    --color-compose-send-button-background: hsl(240deg 96% 68%);
+    --color-compose-send-button-background: var(--accent);
     --color-compose-send-button-background-interactive: hsl(240deg 41% 50%);
     --color-compose-send-button-focus-border: hsl(232deg 20% 10%);
     --color-compose-send-button-focus-shadow: light-dark(
@@ -1530,7 +1530,7 @@
     );
 
     /* Text colors */
-    --color-text-default: light-dark(hsl(0deg 0% 20%), hsl(0deg 0% 87%));
+    --color-text-default: var(--text-default);
     /* Unlike the light theme, the dark theme renders message
        text in the default color. */
     --color-text-message-default: light-dark(
@@ -2002,7 +2002,7 @@
         color-mix(in oklch, hsl(229deg 9% 36%) 11%, transparent),
         color-mix(in oklch, hsl(229deg 9% 60%) 18%, transparent)
     );
-    --color-copy-button-success: light-dark(var(--green-500), var(--green-300));
+    --color-copy-button-success: var(--success);
 
     /* Reaction container colors */
     --color-message-reaction-border: light-dark(

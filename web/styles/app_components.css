@@ -525,7 +525,7 @@ input.settings_text_input {
     transition-property: background-color, box-shadow;
     box-shadow: none;
     /* This color just passes WCAG AA */
-    background-color: hsl(240deg 96% 68%);
+    background-color: var(--accent);
     cursor: pointer;
     border: none;
     border-radius: 4px;
