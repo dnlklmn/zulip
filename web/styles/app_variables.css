@@ -1,33 +1,38 @@
 :root {
     /* Zulip color palette. 11-step scales (50 = lightest, 950 = darkest).
-       Greys and cool greys follow a linear HSL formula with ΔL=9.
+       Grey and cool lightness stops are hand-tuned to land on the
+       canonical lightness values that exist in the current codebase
+       (canvas L94/L11, default text L20/L87, default borders L80,
+       muted text L67, etc.), so that component tokens can migrate to
+       scale/semantic references with zero visual drift.
        Accent scales (brand, blue, green, orange, red) are hand-tuned hex. */
 
     /* grey — pure neutral */
-    --grey-50: hsl(0deg 0% 95%);
-    --grey-100: hsl(0deg 0% 86%);
-    --grey-200: hsl(0deg 0% 77%);
-    --grey-300: hsl(0deg 0% 68%);
-    --grey-400: hsl(0deg 0% 59%);
+    --grey-50: hsl(0deg 0% 94%);
+    --grey-100: hsl(0deg 0% 87%);
+    --grey-200: hsl(0deg 0% 80%);
+    --grey-300: hsl(0deg 0% 67%);
+    --grey-400: hsl(0deg 0% 57%);
     --grey-500: hsl(0deg 0% 50%);
-    --grey-600: hsl(0deg 0% 41%);
-    --grey-700: hsl(0deg 0% 32%);
-    --grey-800: hsl(0deg 0% 23%);
-    --grey-900: hsl(0deg 0% 14%);
+    --grey-600: hsl(0deg 0% 40%);
+    --grey-700: hsl(0deg 0% 30%);
+    --grey-800: hsl(0deg 0% 20%);
+    --grey-900: hsl(0deg 0% 11%);
     --grey-950: hsl(0deg 0% 5%);
 
     /* cool — blue-tinted neutral, for a small set of dark-mode
-       surfaces that historically carried a subtle blue tint */
-    --cool-50: hsl(230deg 10% 95%);
-    --cool-100: hsl(230deg 10% 86%);
-    --cool-200: hsl(230deg 10% 77%);
-    --cool-300: hsl(230deg 10% 68%);
-    --cool-400: hsl(230deg 10% 59%);
+       surfaces that historically carried a subtle blue tint.
+       Lightness stops mirror the grey scale. */
+    --cool-50: hsl(230deg 10% 94%);
+    --cool-100: hsl(230deg 10% 87%);
+    --cool-200: hsl(230deg 10% 80%);
+    --cool-300: hsl(230deg 10% 67%);
+    --cool-400: hsl(230deg 10% 57%);
     --cool-500: hsl(230deg 10% 50%);
-    --cool-600: hsl(230deg 10% 41%);
-    --cool-700: hsl(230deg 10% 32%);
-    --cool-800: hsl(230deg 10% 23%);
-    --cool-900: hsl(230deg 10% 14%);
+    --cool-600: hsl(230deg 10% 40%);
+    --cool-700: hsl(230deg 10% 30%);
+    --cool-800: hsl(230deg 10% 20%);
+    --cool-900: hsl(230deg 10% 11%);
     --cool-950: hsl(230deg 10% 5%);
 
     /* stylelint-disable color-no-hex */
