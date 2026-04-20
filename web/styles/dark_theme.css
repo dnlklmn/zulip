@@ -28,7 +28,7 @@
     }
 
     .dropdown-list-delete {
-        /* hsl(7deg 100% 74%) corresponds to var(--red-250) */
+        /* Close to var(--red-300). */
         color: color-mix(
             in oklch,
             hsl(7deg 100% 74%) 70%,

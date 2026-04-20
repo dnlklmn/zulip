@@ -1,166 +1,229 @@
 :root {
-    /* Zulip color palette */
+    /* Zulip color palette. 11-step scales (50 = lightest, 950 = darkest).
+       Grey and cool lightness stops are hand-tuned to land on the
+       canonical lightness values that exist in the current codebase
+       (canvas L94/L11, default text L20/L87, default borders L80,
+       muted text L67, etc.), so that component tokens can migrate to
+       scale/semantic references with zero visual drift.
+       Accent scales (brand, blue, green, orange, red) are hand-tuned hex. */
+
+    /* grey — pure neutral */
+    --grey-50: hsl(0deg 0% 94%);
+    --grey-100: hsl(0deg 0% 87%);
+    --grey-200: hsl(0deg 0% 80%);
+    --grey-300: hsl(0deg 0% 67%);
+    --grey-400: hsl(0deg 0% 57%);
+    --grey-500: hsl(0deg 0% 50%);
+    --grey-600: hsl(0deg 0% 40%);
+    --grey-700: hsl(0deg 0% 30%);
+    --grey-800: hsl(0deg 0% 20%);
+    --grey-900: hsl(0deg 0% 11%);
+    --grey-950: hsl(0deg 0% 5%);
+
+    /* cool — blue-tinted neutral, for a small set of dark-mode
+       surfaces that historically carried a subtle blue tint.
+       Lightness stops mirror the grey scale. */
+    --cool-50: hsl(230deg 10% 94%);
+    --cool-100: hsl(230deg 10% 87%);
+    --cool-200: hsl(230deg 10% 80%);
+    --cool-300: hsl(230deg 10% 67%);
+    --cool-400: hsl(230deg 10% 57%);
+    --cool-500: hsl(230deg 10% 50%);
+    --cool-600: hsl(230deg 10% 40%);
+    --cool-700: hsl(230deg 10% 30%);
+    --cool-800: hsl(230deg 10% 20%);
+    --cool-900: hsl(230deg 10% 11%);
+    --cool-950: hsl(230deg 10% 5%);
+
     /* stylelint-disable color-no-hex */
-    /* grey */
-    --grey-0: #f7f8fc;
-    --grey-50: #f2f3f7;
-    --grey-100: #e9ebf2;
-    --grey-150: #dfe1e8;
-    --grey-200: #cbcdd6;
-    --grey-250: #bbbdc8;
-    --grey-300: #aaadba;
-    --grey-350: #9ea1ae;
-    --grey-400: #9194a3;
-    --grey-450: #858897;
-    --grey-500: #767988;
-    --grey-550: #626573;
-    --grey-600: #535663;
-    --grey-650: #444754;
-    --grey-700: #393c49;
-    --grey-750: #2d303c;
-    --grey-800: #242631;
-    --grey-850: #181a25;
-    --grey-900: #11131e;
-    --grey-950: #0a0c17;
-    --grey-1000: #070812;
 
-    /* purple */
-    --purple-0: #f3f2fd;
-    --purple-50: #ededfc;
-    --purple-100: #e5e5fc;
-    --purple-150: #dbdaff;
-    --purple-200: #c9c7fd;
-    --purple-250: #b8b4ff;
-    --purple-300: #aba5fd;
-    --purple-350: #9e94fd;
-    --purple-400: #9283fd;
-    --purple-450: #8a70fc;
-    --purple-500: #7f63ee;
-    --purple-550: #7153dc;
-    --purple-600: #5f3cc5;
-    --purple-650: #522ab4;
-    --purple-700: #4615a3;
-    --purple-750: #370386;
-    --purple-800: #2c0070;
-    --purple-850: #200154;
-    --purple-900: #13013a;
-    --purple-950: #0d002c;
-    --purple-1000: #070020;
-
-    /* violet */
-    --violet-0: #f1f3fe;
-    --violet-50: #eceefc;
-    --violet-100: #e3e6fd;
-    --violet-150: #d8dcfc;
-    --violet-200: #c3c9fe;
-    --violet-250: #b1b7fe;
-    --violet-300: #a3a9fc;
-    --violet-350: #9398fd;
-    --violet-400: #8688fd;
-    --violet-450: #7977fe;
-    --violet-500: #6e69f3;
-    --violet-550: #6159e1;
-    --violet-600: #4f42c9;
-    --violet-650: #4331b8;
-    --violet-700: #381da7;
-    --violet-750: #2b0e8a;
-    --violet-800: #230773;
-    --violet-850: #180557;
-    --violet-900: #0e033c;
-    --violet-950: #08012e;
-    --violet-1000: #050121;
+    /* brand — anchored on brand-500 = hsl(240 96% 68%),
+       the primary Zulip action/button color */
+    --brand-50: #f0f0ff;
+    --brand-100: #e3e3fe;
+    --brand-200: #c6c6fd;
+    --brand-300: #a8a8fc;
+    --brand-400: #8080fd;
+    --brand-500: #5f5ffc;
+    --brand-600: #4a4ae8;
+    --brand-700: #3a3ac9;
+    --brand-800: #2e2ea3;
+    --brand-900: #22227d;
+    --brand-950: #161658;
 
     /* blue */
-    --blue-0: #eff3fe;
     --blue-50: #e5edfe;
     --blue-100: #dae5fd;
-    --blue-150: #cbdbfd;
     --blue-200: #b4cafd;
-    --blue-250: #97b6fe;
     --blue-300: #84a8fd;
-    --blue-350: #7199fe;
     --blue-400: #5f8bfc;
-    --blue-450: #4d7bfd;
     --blue-500: #406ef6;
-    --blue-550: #325ce3;
     --blue-600: #2145cb;
-    --blue-650: #1633b9;
     --blue-700: #0f23ac;
-    --blue-750: #0a089b;
     --blue-800: #06037c;
-    --blue-850: #03025c;
     --blue-900: #020145;
     --blue-950: #010034;
-    --blue-1000: #010024;
 
     /* green */
-    --green-0: #ebffee;
     --green-50: #d0fed8;
     --green-100: #b4ffc3;
-    --green-150: #a3f9b5;
     --green-200: #82e89a;
-    --green-250: #6bd586;
     --green-300: #57c273;
-    --green-350: #41ae61;
     --green-400: #2f9f52;
-    --green-450: #158f44;
     --green-500: #07833c;
-    --green-550: #087736;
     --green-600: #09672e;
-    --green-650: #035926;
     --green-700: #054f22;
-    --green-750: #05401b;
     --green-800: #013112;
-    --green-850: #03260e;
     --green-900: #001d07;
     --green-950: #011505;
-    --green-1000: #010d03;
 
     /* orange */
-    --orange-0: #fef4e3;
     --orange-50: #ffeccd;
     --orange-100: #ffda9b;
-    --orange-150: #fecb6f;
     --orange-200: #febe3d;
-    --orange-250: #f8b325;
     --orange-300: #eba002;
-    --orange-350: #db920d;
     --orange-400: #c8850d;
-    --orange-450: #ba7401;
     --orange-500: #a96a05;
-    --orange-550: #9c5c00;
     --orange-600: #88520c;
-    --orange-650: #764607;
     --orange-700: #623b0c;
-    --orange-750: #4f2e06;
     --orange-800: #3f2404;
-    --orange-850: #321c04;
     --orange-900: #291602;
     --orange-950: #200f01;
-    --orange-1000: #180c03;
 
     /* red */
-    --red-0: #fcf3f2;
     --red-50: #ffe4e0;
     --red-100: #ffd4cd;
-    --red-150: #ffbfb5;
     --red-200: #fea497;
-    --red-250: #ff8b7c;
     --red-300: #fd7465;
-    --red-350: #fd5f50;
     --red-400: #f34c3e;
-    --red-450: #e1392e;
     --red-500: #d22720;
-    --red-550: #c0070a;
     --red-600: #ac0508;
-    --red-650: #960708;
     --red-700: #7c0203;
-    --red-750: #650102;
     --red-800: #4f0001;
-    --red-850: #400101;
     --red-900: #330201;
     --red-950: #280100;
-    --red-1000: #1a0200;
+
+    /* ============================================================
+       Semantic tokens.
+
+       These tokens sit between the primitive scales above and the
+       component-level --color-* tokens below. They are the only
+       tier that uses light-dark() to pair theme values; component
+       tokens reference these semantic ones and do not need their
+       own light/dark pairs.
+
+       If you are reaching for a raw hsl()/hex literal in a
+       component, check here first — most UI roles already have
+       a semantic token.
+       ============================================================ */
+
+    /* Borders — solid. Use alpha borders inline where a border
+       must read correctly over varied backgrounds. */
+    --border-hint: light-dark(var(--grey-200), var(--grey-800));
+    --border-default: light-dark(var(--grey-300), var(--grey-700));
+    --border-emphasized: light-dark(var(--grey-500), var(--grey-500));
+
+    /* Surfaces — default is the app canvas; float is raised
+       (popovers, cards, modals); dip is recessed. */
+    --surface-default: light-dark(var(--grey-50), var(--grey-900));
+    --surface-float: light-dark(hsl(0deg 0% 100%), var(--grey-800));
+    --surface-dip: light-dark(var(--grey-100), var(--grey-950));
+
+    /* Text */
+    --text-default: light-dark(var(--grey-800), var(--grey-100));
+    --text-dim: light-dark(var(--grey-500), var(--grey-400));
+    --text-disabled: light-dark(var(--grey-400), var(--grey-600));
+    --text-emphasized: light-dark(var(--grey-950), hsl(0deg 0% 100%));
+
+    /* Focus ring */
+    --focus-ring: var(--brand-500);
+
+    /* Accent (primary interactive color — Zulip brand blue) */
+    --accent: var(--brand-500);
+    --accent-hover: var(--brand-600);
+    --accent-subtle: light-dark(var(--brand-100), var(--brand-900));
+
+    /* Semantic states */
+    --danger: light-dark(var(--red-600), var(--red-400));
+    --danger-subtle: light-dark(var(--red-50), var(--red-900));
+    --warning: light-dark(var(--orange-500), var(--orange-300));
+    --warning-subtle: light-dark(var(--orange-50), var(--orange-900));
+    --success: light-dark(var(--green-500), var(--green-300));
+    --success-subtle: light-dark(var(--green-50), var(--green-900));
+
+    /* Feature tints. These carry identity for specific parts of
+       the product (direct messages, tips, group mentions, embedded
+       widgets) and do not bottom out in the neutral/brand scales. */
+    --surface-dm: light-dark(hsl(45deg 20% 96%), hsl(46deg 7% 16%));
+    --surface-dm-header: light-dark(hsl(46deg 35% 93%), hsl(46deg 15% 20%));
+    --surface-tip: light-dark(hsl(46deg 63% 95%), hsl(46deg 28% 38% / 27%));
+    --border-tip: light-dark(hsl(49deg 20% 84%), hsl(49deg 38% 46%));
+    --surface-group-mention: light-dark(
+        hsl(180deg 40% 94%),
+        hsl(180deg 13% 14%)
+    );
+    --surface-widget-action: light-dark(
+        hsl(0deg 0% 100%),
+        hsl(185deg 20% 20%)
+    );
+
+    /* ============================================================
+       Spacing scale.
+
+       em-based so spacing inherits proportionally through
+       font-size contexts (Zulip's convention per CLAUDE.md).
+       Numeric names follow Tailwind's scheme: N = N × 0.25em,
+       which at a 16px base corresponds 1:1 with Tailwind's
+       N × 0.25rem (e.g. --space-3 ≈ 12px, --space-4 = 1em ≈ 16px,
+       --space-6 ≈ 24px).
+
+       The px value noted in each comment is the *approximate*
+       rendered size at a 16px parent font-size. Actual rendered
+       size scales with the using element's font-size.
+       ============================================================ */
+
+    /* Primitives */
+    --space-0: 0;
+    --space-px: 1px; /* hairline — px deliberate, does not scale */
+    --space-0-5: 0.125em; /* ~2px  */
+    --space-1: 0.25em; /* ~4px  */
+    --space-1-5: 0.375em; /* ~6px  */
+    --space-2: 0.5em; /* ~8px  */
+    --space-2-5: 0.625em; /* ~10px */
+    --space-3: 0.75em; /* ~12px */
+    --space-4: 1em; /* ~16px */
+    --space-5: 1.25em; /* ~20px */
+    --space-6: 1.5em; /* ~24px */
+    --space-8: 2em; /* ~32px */
+    --space-10: 2.5em; /* ~40px */
+    --space-12: 3em; /* ~48px */
+    --space-16: 4em; /* ~64px */
+
+    /* Semantic */
+    --space-xs: var(--space-1); /* 0.25em ≈ 4px  */
+    --space-sm: var(--space-2); /* 0.5em  ≈ 8px  */
+    --space-md: var(--space-3); /* 0.75em ≈ 12px */
+    --space-lg: var(--space-4); /* 1em    ≈ 16px */
+    --space-xl: var(--space-6); /* 1.5em  ≈ 24px */
+    --space-2xl: var(--space-8); /* 2em    ≈ 32px */
+
+    /* ============================================================
+       Font-size scale.
+
+       em-based so sizes inherit proportionally. Ratios follow
+       Tailwind's canonical text scale (0.75, 0.875, 1, 1.125,
+       1.25, 1.5, 1.875) expressed in em. The px value in each
+       comment assumes a 16px parent; at Zulip's 14px base the
+       rendered sizes are proportionally smaller.
+       ============================================================ */
+
+    --text-size-xs: 0.75em; /* ~12px @ 16 */
+    --text-size-sm: 0.875em; /* ~14px */
+    --text-size-md: 1em; /* base */
+    --text-size-lg: 1.125em; /* ~18px */
+    --text-size-xl: 1.25em; /* ~20px */
+    --text-size-2xl: 1.5em; /* ~24px */
+    --text-size-3xl: 1.875em; /* ~30px */
 
     color-scheme: light;
 
@@ -192,7 +255,7 @@
     /*
     Height of the search box, which appears in the header.
     */
-    --search-box-height: 2em; /* 32px at 16px em */
+    --search-box-height: var(--space-2xl); /* 2em, 32px at 16px em */
     --search-box-width: 9.375em; /* 150px at 16px em */
 
     @media (width < $md_min) {
@@ -260,7 +323,7 @@
     );
     /* This represents the space in the sidebar reserved for symbols like
        the #; labels like the stream name go to the right of this. */
-    --left-sidebar-icon-column-width: 1em;
+    --left-sidebar-icon-column-width: var(--space-lg); /* 1em */
     /* Offset on unreads to make New topic button appear centered. */
     --left-sidebar-unread-offset: 6.5px;
     /* space direct message / stream / topic names from unread counters
@@ -352,7 +415,7 @@
        which separates the right sidebar from the message area. */
     --right-sidebar-padding-left: 2px;
     --right-sidebar-heading-left-spacing: 5px;
-    --right-sidebar-avatar-width: 2em;
+    --right-sidebar-avatar-width: var(--space-2xl); /* 2em */
     --right-sidebar-avatar-height: var(--right-sidebar-avatar-width);
     --right-sidebar-avatar-right-margin: 0.85ch;
     --right-sidebar-presence-circle-width: 1.4285em; /* 20px at 14px em */
@@ -536,7 +599,7 @@
     allow elements like DM pills to stack without breaking out of their
     flex item. 2em is 32px at 16px/1em.
     */
-    --compose-recipient-box-min-height: 2em;
+    --compose-recipient-box-min-height: var(--space-2xl); /* 2em, 32px at 16px/1em */
     /* 28px at 14px/1em */
     /* Note that this variable can only be used in contexts where
        the font-size doesn't deviate from the base font-size;
@@ -544,7 +607,7 @@
        uses font-sizing to adjust the size of the icon. Related
        values have been noted in comments with this variable name,
        to make their coordination a little less painful. */
-    --compose-formatting-buttons-row-height: 2em;
+    --compose-formatting-buttons-row-height: var(--space-2xl); /* 2em */
 
     /*
     Width of the area where the compose box buttons are placed, "inside"
@@ -635,7 +698,7 @@
     --length-user-status-circle: 0.5714em;
     /* Shrink the user activity circle for the Recent Conversations context. */
     /* 7px at 14px/1em */
-    --length-user-status-circle-recent-conversations: 0.5em;
+    --length-user-status-circle-recent-conversations: var(--space-sm); /* 0.5em */
     --length-user-status-circle-popover-menu: 8px;
     --length-user-popover-menu-avatar: 64px;
 
@@ -649,7 +712,7 @@
     /* .display-type and .list-toggler-container
        in subscriptions and user group settings overlays */
     --settings-overlay-subheader-height: 3.1429em; /* 44px at 14px/em */
-    --settings-overlay-header-button-height: 2em;
+    --settings-overlay-header-button-height: var(--space-2xl); /* 2em */
     /* Informational overlay */
     --informational-overlay-max-width: 43.75em;
     --modal-input-width: 23.2142em;
@@ -720,8 +783,8 @@
     --inline-decorated-channel-name-padding-left: 0.0937em; /* 1.5px at 16px/em */
 
     /* Color picker popover values */
-    --size-color-swatch: 1em;
-    --grid-gap-color-swatch: 1em;
+    --size-color-swatch: var(--space-lg); /* 1em */
+    --grid-gap-color-swatch: var(--space-lg); /* 1em */
     --padding-color-swatch-list: 0.6666em;
     --gradient-custom-swatch: conic-gradient(
         from 0deg at 50% 50% in oklch longer hue,
@@ -743,11 +806,11 @@
     --popup-banner-translate-y-distance: 100px;
 
     /* Input grid layout variables */
-    --input-icon-starting-offset: 0.5em; /* 8px at 16px/1em */
-    --input-icon-width: 1em; /* 16px at 16px/1em */
+    --input-icon-starting-offset: var(--space-sm); /* 0.5em, 8px at 16px/1em */
+    --input-icon-width: var(--space-lg); /* 1em, 16px at 16px/1em */
     --input-icon-content-gap: 0.4375em; /* 7px at 16px/1em */
-    --input-button-content-gap: 0.25em; /* 4px at 16px/1em */
-    --input-button-width: 1.5em; /* 24px at 16px/1em */
+    --input-button-content-gap: var(--space-xs); /* 0.25em, 4px at 16px/1em */
+    --input-button-width: var(--space-xl); /* 1.5em, 24px at 16px/1em */
     --input-button-ending-offset: 0.125em; /* 2px at 16px/1em */
 
     /* Input padding and border variables */
@@ -1157,9 +1220,9 @@
 
     /* Recent view */
     --recent-view-max-avatars: 4;
-    --recent-view-participant-item-width: 1.5em; /* 24px at 16px / 1em */
+    --recent-view-participant-item-width: var(--space-xl); /* 1.5em, 24px at 16px / 1em */
     --recent-view-participant-item-padding-x: 0.0938em; /* 1.5px at 16px / 1em */
-    --recent-view-participants-padding-x-start: 0.25em; /* 4px at 16px / 1em */
+    --recent-view-participants-padding-x-start: var(--space-xs); /* 0.25em, 4px at 16px / 1em */
     --color-border-recent-view-row: light-dark(
         hsl(0deg 0% 87%),
         hsl(0deg 0% 0% / 20%)
@@ -1544,7 +1607,7 @@
         hsl(236deg 33% 90%)
     );
     --color-text-user-card-secondary: light-dark(
-        var(--grey-550),
+        var(--grey-600),
         var(--grey-400)
     );
     --color-text-url: hsl(200deg 100% 40%);
@@ -1917,35 +1980,27 @@
         var(--color-background) 100%
     );
     --color-copy-button: light-dark(
-        /* hsl(229deg 9% 36%) corresponds to --grey-600.
-           We use the hsl() equivalent directly since postcss-color-mix-function
-           cannot dynamically resolve var() arguments. */
+        /* Inline hsl() values here and below are required because
+           postcss-color-mix-function cannot resolve var() arguments. */
             color-mix(in oklch, hsl(229deg 9% 36%) 70%, transparent),
-        /* hsl(229deg 10% 70%) corresponds to --grey-400. */
             color-mix(in oklch, hsl(229deg 10% 70%) 70%, transparent)
     );
     --color-copy-button-hover: light-dark(var(--grey-600), var(--grey-300));
     --color-copy-button-square-bg-hover: light-dark(
-        /* --grey-600, opacity 0.07 */
-            color-mix(in oklch, hsl(229deg 9% 36%) 7%, transparent),
-        /* --grey-400, opacity 0.14 */
-            color-mix(in oklch, hsl(230deg 9% 60%) 14%, transparent)
+        color-mix(in oklch, hsl(229deg 9% 36%) 7%, transparent),
+        color-mix(in oklch, hsl(230deg 9% 60%) 14%, transparent)
     );
     --color-copy-button-active: light-dark(
-        /* --grey-600, opacity 0.7 */
-            color-mix(in oklch, hsl(229deg 9% 36%) 70%, transparent),
-        /* --grey-300, opacity 0.7 */
-            color-mix(in oklch, hsl(229deg 10% 70%) 70%, transparent)
+        color-mix(in oklch, hsl(229deg 9% 36%) 70%, transparent),
+        color-mix(in oklch, hsl(229deg 10% 70%) 70%, transparent)
     );
     --color-copy-button-square-active: light-dark(
         var(--grey-600),
         var(--grey-300)
     );
     --color-copy-button-square-bg-active: light-dark(
-        /* --grey-600, opacity 0.11 */
-            color-mix(in oklch, hsl(229deg 9% 36%) 11%, transparent),
-        /* --grey-400, opacity 0.18 */
-            color-mix(in oklch, hsl(229deg 9% 60%) 18%, transparent)
+        color-mix(in oklch, hsl(229deg 9% 36%) 11%, transparent),
+        color-mix(in oklch, hsl(229deg 9% 60%) 18%, transparent)
     );
     --color-copy-button-success: light-dark(var(--green-500), var(--green-300));
 
@@ -2392,12 +2447,12 @@
     );
     --background-color-current-setting-dropdown-item: color-mix(
         in srgb,
-        var(--purple-500) 13%,
+        var(--brand-500) 13%,
         transparent
     );
     --color-current-setting-dropdown-item: light-dark(
-        var(--purple-700),
-        var(--purple-300)
+        var(--brand-700),
+        var(--brand-300)
     );
     --background-color-active-typeahead-item: light-dark(
         hsl(220deg 12% 4.9% / 5%),
